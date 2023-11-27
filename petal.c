@@ -28,9 +28,13 @@ void setStencil(float centerX, float centerY, float radius) {
     glStencilFunc(GL_ALWAYS, 1, 1);
     glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
 
-    drawCircleOutline(centerX, centerY, radius, 1.0, 1.0, 1.0);
+    drawCircleOlClear(GL_STENCIL_BUFFER_BIT);
 
-    glDisable(GL_STENCIL_TEST);
+    glEnable(GL_STENCIL_TEST);
+    glStencilFunc(GL_ALWAYS, 1, 1);
+    glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
+
+    drawCircle();
 }
 
 void display() {
