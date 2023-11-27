@@ -6,7 +6,7 @@ void display() {
 
     // glPointSize(10);
 
-    glBegin(GL_POINTS);
+    glBegin(GL_POLYGON);
     glVertex2f(-0.5, -0.5); // Bottom-left vertex
     glVertex2f(0.5, -0.5);  // Bottom-right vertex
     glVertex2f(0.5, 0.5);   // Top-right vertex
