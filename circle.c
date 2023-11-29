@@ -26,7 +26,6 @@ void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    // Draw the first circle outline (magenta) without stencil testing
     drawCircleOutline(0.0, 0.0, 0.5, 1.0, 0.0, 1.0);
 
     glutSwapBuffers();
